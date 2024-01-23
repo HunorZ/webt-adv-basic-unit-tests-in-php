@@ -1,0 +1,13 @@
+{
+    "name": "hunor/webt-adv-basic-unit-tests-in-php",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Hunor Zakarias",
+            "email": "hunor.zakarias@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "10"
+    }
+}
