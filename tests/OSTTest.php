@@ -1,9 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
 require_once 'src/OSTSeeder.php';
+require_once 'src/Song.php';
 
 class OSTTest extends TestCase
 {
@@ -36,6 +38,9 @@ class OSTTest extends TestCase
 
     public function testObjectsProperties(): void
     {
-        $this->assert();
+        foreach ($this->testData as $ost) {
+            $this->assertGreaterThan(0,sizeof($ost->trackList));
+            $this->assertInstanceOf(Song::class, $ost->trackList[0]);
+        }
     }
 }
